@@ -13,7 +13,7 @@ router.get(
   authorizeRole("admin"),
   userController.getAllUsers
 );
-router.get("/user/:id", userController.getUserById);
+router.get("/user/:username", userController.getUserByUsername);
 
 router.post("/user/login", userController.loginUser);
 
