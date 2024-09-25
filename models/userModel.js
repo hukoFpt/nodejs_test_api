@@ -17,10 +17,11 @@ const UserSchema = new mongoose.Schema({
     min: 6,
     max: 1024,
   },
-  avatar: {
+  role: {
     type: String,
-    default:
-      "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/787.jpg",
+    required: true,
+    enum: ["user", "admin"],
+    default: "user",
   },
 });
 
