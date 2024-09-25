@@ -11,6 +11,8 @@ connectDB();
 
 app.use(bodyParser.json());
 
-app.use("/", require("./routes/userRoutes"));
+app.use("/api", require("./routes/api"));
+app.use("/api/", require("./routes/user"));
+app.use("/api/", require("./routes/post"));
 
 app.listen(port, () => {});
